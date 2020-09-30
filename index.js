@@ -9,7 +9,7 @@ function extract(html) {
     .concat(extractTag(html, "strong"))
     .concat(extractTag(html, "sub", "subscript"))
     .concat(extractTag(html, "sup", "superscript"))
-    .concat(extractTag(html, "hightlight")) // TODO: I don't think we can grab this from something predefined
+    .concat(extractTag(html, "highlight")) // TODO: I don't think we can grab this from something predefined
     .concat(extractTag(html, "symbol"))
     .concat(extractTag(html, "u", "underline")); // TODO: Probably not very common, but it's the best match in HTML5
 
@@ -31,7 +31,7 @@ function extractLinks(html) {
     return {
       type: "link:external", // TODO: detect internal links
       offset: stripTags(link.input.slice(0, link.index)).length,
-      length: link[2].length,
+      length: stripTags(link[2]).length,
       uri: link[1],
     };
   });
@@ -60,7 +60,6 @@ function extractByRegex(html, regex) {
   let m;
 
   while ((m = regex.exec(html)) !== null) {
-    // This is necessary to avoid infinite loops with zero-width matches
     if (m.index === regex.lastIndex) {
       regex.lastIndex++;
     }

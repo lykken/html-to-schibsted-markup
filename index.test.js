@@ -1,4 +1,3 @@
-const { exportAllDeclaration } = require("@babel/types");
 const converter = require(".");
 
 describe("html-to-schibsted-markup tests", () => {
