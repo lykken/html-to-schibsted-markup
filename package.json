@@ -1,7 +1,13 @@
 {
-  "name": "html-to-schibsted-markup",
+  "name": "@lykken/html-to-schibsted-markup",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "version": "0.0.1",
   "description": "Converts html input to a Schibsted markup object.",
+  "repository": {
+    "url": "https://github.com/lykken/html-to-schibsted-markup.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "npx jest --u"
