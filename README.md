@@ -24,7 +24,7 @@ const obj = converter(
   value: "Try sending an email to Santa Claus if you like!",
   markup: [
     {
-      type: "link:external", // TODO: Or something else?
+      type: "link:external",
       offset: 4,
       length: 31,
       uri: "mailto:julenissen@nordpolen.no",
