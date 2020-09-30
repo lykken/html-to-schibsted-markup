@@ -1,0 +1,14 @@
+{
+  "name": "html-to-schibsted-markup",
+  "version": "0.0.1",
+  "description": "Converts html input to a Schibsted markup object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest --u"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^26.4.2"
+  }
+}
